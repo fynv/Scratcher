@@ -1,0 +1,15 @@
+<!DOCTYPE RCC><RCC version="1.0">
+<qresource>
+    <file>icons/scratcher.png</file>
+    <file>icons/new.png</file>
+    <file>icons/load.png</file>
+    <file>icons/save.png</file>
+    <file>icons/exit.png</file>
+    <file>icons/play.png</file>
+    <file>icons/stop.png</file>
+    <file>icons/reset.png</file>
+    <file>icons/zoomin.png</file>
+    <file>icons/zoomout.png</file>
+    <file>icons/delete.png</file>
+</qresource>
+</RCC>
