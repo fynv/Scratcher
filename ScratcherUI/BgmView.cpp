@@ -141,8 +141,8 @@ void BgmView::paintGL()
 	}
 
 	{
-		int x = m_scroll_offset;
-		painter.fillRect(x, 0, 50, this->height(), QColor(255, 255, 255, 80));
+		int y = this->height();
+		painter.fillRect(0, y - 15, this->width(), 15, QColor(255, 255, 255, 80));
 	}
 
 	// ruler-h

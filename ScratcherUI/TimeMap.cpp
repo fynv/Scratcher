@@ -55,9 +55,9 @@ void TimeMap::update_curve()
 			if (y > max_v) max_v = y;
 		}
 
-		int height = (int)(ceil((max_v - min_v + 1.0f)*m_scale_in));		
+		int height = (int)(ceil((max_v - min_v + m_bottom_margin)*m_scale_in));
 		this->setFixedHeight(height);
-		m_offset_in = 1.0f - min_v;
+		m_offset_in = m_bottom_margin - min_v;
 
 		m_ctrl_pnts_gpu = (std::unique_ptr<GLBuffer>)(new GLBuffer(&m_gl, sizeof(QVector4D)*ctrl_pnts.size(), GL_SHADER_STORAGE_BUFFER));
 		m_ctrl_pnts_gpu->upload(ctrl_pnts.data());

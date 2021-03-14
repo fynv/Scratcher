@@ -86,13 +86,13 @@ protected:
 
 private:
 	QOpenGLExtraFunctions m_gl;
-
-	float m_offset_in = 1.0f;
+	float m_bottom_margin = 0.2f;
 	float m_len_slope_vec = 30.0f;
 	float m_slope_limit = 20.0f;
 	float m_size_ctrl_pnt = 4.0f;
 
 	SamplerScratch* m_sampler = nullptr;
+	float m_offset_in = m_bottom_margin;
 	float m_scale_out = 200.0f;
 	float m_scale_in = 200.0f;			
 
