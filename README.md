@@ -12,6 +12,10 @@ The second curve controls the volume of the sound effect.
 
 Optionally, the sound-effect can be mixed with a BGM music in real time.
 
+DJ Scratching resources can be found on internet, for example:
+[https://soundsozai.com/dj-scratch-samples/](https://soundsozai.com/dj-scratch-samples/)
+
+
 ## Binary Releases
 
 [https://github.com/fynv/Scratcher/releases/](https://github.com/fynv/Scratcher/releases/)
