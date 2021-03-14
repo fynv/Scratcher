@@ -10,7 +10,7 @@ The first curve is a time-map. It controls the back and forth movement of the au
 
 The second curve controls the volume of the sound effect.
 
-Optionally, the sound-effect can be mixed with a BGM music in real time.
+Optionally, the sound-effect can be mixed with a BGM in real time.
 
 DJ Scratching resources can be found on internet, for example:
 [https://soundsozai.com/dj-scratch-samples/](https://soundsozai.com/dj-scratch-samples/)
