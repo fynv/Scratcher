@@ -453,8 +453,15 @@ void Scratcher::SaveResult(const QString& filename)
 	WriteAudioToFile(&buf_out, fn.c_str());
 }
 
+void Scratcher::_set_cursor_pos(double pos)
+{
+	m_cursor_pos = pos;
+	m_ui.label_cursor->setText(QString::number(pos));
+}
+
 void Scratcher::_emit_cursor_pos(double pos)
 {
+	m_ui.label_cursor->setText(QString::number(pos));
 	m_ui.canvas_timemap->set_cursor_pos(pos);
 	m_ui.canvas_timemap->update();
 	m_ui.canvas_volume->set_cursor_pos(pos);
@@ -793,7 +800,7 @@ void Scratcher::Cursor_Moved(double pos)
 {
 	if (!m_is_playing)
 	{
-		m_cursor_pos = pos;
+		_set_cursor_pos(pos);
 		m_ui.canvas_timemap->set_cursor_pos(pos);
 		m_ui.canvas_timemap->update();
 		m_ui.canvas_volume->set_cursor_pos(pos);

@@ -10,6 +10,8 @@ The first curve is a time-map. It controls the back and forth movement of the au
 
 The second curve controls the volume of the sound effect.
 
+A control points can be added to a curve by a double-click, and can be edited by dragging. The time-map curve is a Cubic Hermite Spline (C1 continuous). Therefore, a slope value can be set for each control-point in addition to its position, where a value 0 is most common. The volume curve is simpler. It is piecewise linear (C0 continuous).
+
 Optionally, the sound-effect can be mixed with a BGM in real time.
 
 DJ Scratching resources can be found on internet, for example:
@@ -22,7 +24,7 @@ DJ Scratching resources can be found on internet, for example:
 
 ## Building from Source-code
 
-1. Download Dependencies
+### Download Dependencies
 
 * Qt5
 
@@ -54,12 +56,12 @@ $ sudo apt install ffmpeg
 $ sudo apt install libavformat-dev
 ```
 
-2. Clone the repository
+### Clone the repository
 ```
 git clone https://github.com/fynv/Scratcher.git
 ```
 
-3. Create a "build" folder and build with CMake
+### Create a "build" folder and build with CMake
 
 For Windows, the variables "FFMPEG_ROOT" and "QT_ROOT" need to be set according to where the dependencies are installed. For Linux, these are not needed if the dependencies are installed to system locations (/usr/ for example).
 

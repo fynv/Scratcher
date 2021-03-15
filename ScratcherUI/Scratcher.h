@@ -97,5 +97,6 @@ private:
 	bool m_is_playing = false;
 	double m_cursor_pos = 0.0;
 
+	void _set_cursor_pos(double pos);
 	void _emit_cursor_pos(double pos);
 };
