@@ -67,4 +67,6 @@ For Windows, the variables "FFMPEG_ROOT" and "QT_ROOT" need to be set according 
 
 After "make install", the binary can be found in the "bin" folder.
 
+## License
 
+Scratcher is licensed under [GPL 2.0](https://github.com/fynv/Scratcher/blob/master/LICENSE)
