@@ -8,16 +8,8 @@ int LinearInterpolate::Add(float x, float y)
 	size_t i = m_samples.size();
 	if (iter != m_samples.end())
 		i = iter - m_samples.begin();
-	if (i > 0 && m_samples[i - 1].x == x)
-	{
-		Move(i - 1, y);
-		return i - 1;
-	}
-	else
-	{
-		m_samples.insert(m_samples.begin() + i, temp);
-		return i;
-	}
+	m_samples.insert(m_samples.begin() + i, temp);
+	return i;
 }
 
 void LinearInterpolate::Move(size_t i, float y)
