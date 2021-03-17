@@ -20,6 +20,7 @@ public:
 
 	int Add(float x, float y);
 	void Move(size_t i, float y);
+	float Move(size_t i, float x, float y);
 	void Remove(size_t i);
 
 	bool f(float x, float& y);

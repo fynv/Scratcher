@@ -23,6 +23,7 @@ public:
 
 	int Add(float x, float y);
 	void Move(size_t i, float y);
+	float Move(size_t i, float x, float y);
 	void SetSlope(size_t i, float slope);
 	void Remove(size_t i);
 

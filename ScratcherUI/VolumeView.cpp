@@ -368,9 +368,7 @@ void VolumeView::mouseMoveEvent(QMouseEvent *event)
 		}
 		else
 		{			
-			m_sampler->remove_volume_control_point(m_selected_id);
-			m_selected_id = m_sampler->add_volume_control_point(pos_x, pos_y);
-			m_cursor_pos = pos_x;			
+			m_cursor_pos = m_sampler->move_volume_control_point(m_selected_id, pos_x, pos_y);
 		}
 		update_curve();
 		emit cursor_moved(m_cursor_pos);

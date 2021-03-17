@@ -513,16 +513,11 @@ void TimeMap::mouseMoveEvent(QMouseEvent *event)
 		if (m_selected_id == -1)
 		{
 			m_sampler->set_start_pos(pos_y);
-			m_cursor_pos = 0.0f;			
+			m_cursor_pos = 0.0;			
 		}
 		else
 		{
-			float x_old, y_old, slope_old;
-			m_sampler->control_point(m_selected_id, x_old, y_old, slope_old);
-			m_sampler->remove_control_point(m_selected_id);
-			m_selected_id = m_sampler->add_control_point(pos_x, pos_y);
-			m_sampler->set_control_point_slope(m_selected_id, slope_old);
-			m_cursor_pos = pos_x;			
+			m_cursor_pos =  m_sampler->move_control_point(m_selected_id, pos_x, pos_y);			
 		}
 		update_curve();
 		emit cursor_moved(m_cursor_pos);

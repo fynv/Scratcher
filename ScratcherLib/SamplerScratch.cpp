@@ -61,6 +61,11 @@ void SamplerScratch::move_control_point(size_t i, float y)
 	m_timemap->Move(i + 1, y);
 }
 
+float SamplerScratch::move_control_point(size_t i, float x, float y)
+{
+	return m_timemap->Move(i + 1, x, y);
+}
+
 void SamplerScratch::set_control_point_slope(size_t i, float slope)
 {
 	m_timemap->SetSlope(i + 1, slope);
@@ -182,6 +187,11 @@ int SamplerScratch::add_volume_control_point(float x, float y)
 void SamplerScratch::move_volume_control_point(size_t i, float y)
 {
 	m_volume->Move(i + 1, y);
+}
+
+float SamplerScratch::move_volume_control_point(size_t i, float x, float y)
+{
+	return m_volume->Move(i + 1, x, y);
 }
 
 void SamplerScratch::remove_volume_control_point(size_t i)

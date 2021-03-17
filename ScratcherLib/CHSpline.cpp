@@ -42,6 +42,15 @@ void CHSpline::Move(size_t i, float y)
 	m_samples[i].y = y;
 }
 
+float CHSpline::Move(size_t i, float x, float y)
+{
+	if (i > 0 && x < m_samples[i - 1].x) x = m_samples[i - 1].x;
+	if (i < m_samples.size()-1 && x > m_samples[i + 1].x) x = m_samples[i + 1].x;
+	m_samples[i].x = x;
+	m_samples[i].y = y;
+	return x;
+}
+
 void CHSpline::SetSlope(size_t i, float slope)
 {
 	m_samples[i].slope = slope;

@@ -25,6 +25,15 @@ void LinearInterpolate::Move(size_t i, float y)
 	m_samples[i].y = y;
 }
 
+float LinearInterpolate::Move(size_t i, float x, float y)
+{
+	if (i > 0 && x < m_samples[i - 1].x) x = m_samples[i - 1].x;
+	if (i < m_samples.size() - 1 && x > m_samples[i + 1].x) x = m_samples[i + 1].x;
+	m_samples[i].x = x;
+	m_samples[i].y = y;
+	return x;
+}
+
 void LinearInterpolate::Remove(size_t i)
 {
 	m_samples.erase(m_samples.begin() + i);

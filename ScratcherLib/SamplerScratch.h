@@ -26,6 +26,7 @@ public:
 	void set_start_slope(float slope);
 	int add_control_point(float x, float y);
 	void move_control_point(size_t i, float y);
+	float move_control_point(size_t i, float x, float y);
 	void set_control_point_slope(size_t i, float slope);
 	void remove_control_point(size_t i);
 
@@ -40,6 +41,7 @@ public:
 	void set_start_volume(float y);
 	int add_volume_control_point(float x, float y);
 	void move_volume_control_point(size_t i, float y);
+	float move_volume_control_point(size_t i, float x, float y);
 	void remove_volume_control_point(size_t i);
 
 	void volume(float x, float& y);	
