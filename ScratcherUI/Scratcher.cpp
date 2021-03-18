@@ -309,7 +309,7 @@ void Scratcher::do_save_project(QString fullpath)
 #if USE_JSON
 	QJsonObject root;
 	root["filename_source"] = m_filename_source;
-	if (m_filename_source != "")
+	if (m_filename_bgm != "")
 	{
 		root["filename_bgm"] = m_filename_bgm;
 		root["bgm_volume"] = m_sampler->bgm_volume();		
